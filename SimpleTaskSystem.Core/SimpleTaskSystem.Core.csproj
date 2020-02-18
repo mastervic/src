@@ -204,6 +204,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\People\Person.cs" />
+    <Compile Include="Entities\Task\Task.cs" />
+    <Compile Include="Entities\Task\TaskState.cs" />
     <Compile Include="SimpleTaskSystemConsts.cs" />
     <Compile Include="SimpleTaskSystemCoreModule.cs" />
     <Compile Include="AppVersionHelper.cs" />
