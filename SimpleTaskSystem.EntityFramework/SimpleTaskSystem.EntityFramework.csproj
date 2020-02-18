@@ -223,6 +223,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityFramework\Repositories\TaskRepository.cs" />
     <Compile Include="EntityFramework\SimpleTaskSystemDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\SimpleTaskSystemRepositoryBase.cs" />
     <Compile Include="Migrations\202002181418580_InitialCreate.cs" />

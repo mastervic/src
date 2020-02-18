@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace SimpleTaskSystem.Entities
 {
-    public class Task : Entity<long>
+    public class Tasks : Entity<long>
     {
         [ForeignKey("AssignedPersonId")]
         public virtual Person AssignedPerson { get; set; }
@@ -19,7 +19,7 @@ namespace SimpleTaskSystem.Entities
         public virtual DateTime CreationTime { get; set; }
         public virtual TaskState State { get; set; }
 
-        public Task()
+        public Tasks()
         {
             CreationTime = DateTime.Now;
             State = TaskState.Active;
