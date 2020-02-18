@@ -225,6 +225,10 @@
   <ItemGroup>
     <Compile Include="EntityFramework\SimpleTaskSystemDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\SimpleTaskSystemRepositoryBase.cs" />
+    <Compile Include="Migrations\202002181418580_InitialCreate.cs" />
+    <Compile Include="Migrations\202002181418580_InitialCreate.designer.cs">
+      <DependentUpon>202002181418580_InitialCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="SimpleTaskSystemDataModule.cs" />
     <Compile Include="Migrations\201809270654064_InitialMigrations.cs" />
     <Compile Include="Migrations\201809270654064_InitialMigrations.Designer.cs">
@@ -310,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912171340379_Upgraded_To_ABP_5_1_0.resx">
       <DependentUpon>201912171340379_Upgraded_To_ABP_5_1_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181418580_InitialCreate.resx">
+      <DependentUpon>202002181418580_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

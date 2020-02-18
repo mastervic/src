@@ -3,6 +3,8 @@ using System.Data.Entity;
 using Abp.Zero.EntityFramework;
 using SimpleTaskSystem.Authorization.Roles;
 using SimpleTaskSystem.Authorization.Users;
+using SimpleTaskSystem.Entities;
+using SimpleTaskSystem.Entities.People;
 using SimpleTaskSystem.MultiTenancy;
 
 namespace SimpleTaskSystem.EntityFramework
@@ -16,6 +18,10 @@ namespace SimpleTaskSystem.EntityFramework
          *   But it may cause problems when working Migrate.exe of EF. If you will apply migrations on command line, do not
          *   pass connection string name to base classes. ABP works either way.
          */
+
+        public virtual IDbSet<Task> Tasks { get; set; }
+        public virtual IDbSet<Person> People { get; set; }
+
         public SimpleTaskSystemDbContext()
             : base("Default")
         {

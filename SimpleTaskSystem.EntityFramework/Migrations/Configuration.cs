@@ -3,6 +3,7 @@ using Abp.MultiTenancy;
 using Abp.Zero.EntityFramework;
 using SimpleTaskSystem.Migrations.SeedData;
 using EntityFramework.DynamicFilters;
+using SimpleTaskSystem.Entities.People;
 
 namespace SimpleTaskSystem.Migrations
 {
@@ -34,6 +35,13 @@ namespace SimpleTaskSystem.Migrations
                 //You can add seed for tenant databases and use Tenant property...
             }
 
+            context.People.AddOrUpdate(
+                p => p.Name,
+                new Person { Name = "Victoir Mpwanga" },
+                new Person { Name = "Gedeon Gibango" },
+                new Person { Name = "Innocent Suta" },
+                new Person { Name = "John Manguza" }
+                );
             context.SaveChanges();
         }
     }
